@@ -1,4 +1,4 @@
-import { getPostData } from '@/lib/posts'
+import { getPostData, getSortedPostsData } from '@/lib/posts'
 import { Date } from '@/components/Date'
 
 type Params = {
@@ -23,8 +23,15 @@ export const generateMetadata = async ({ params }: Props) => {
   }
 }
 
-const Post = async ({ params }: Props) => {
-  const postData: PostData = await getPostData(params.id)
+export const generateStaticParams = async () => {
+  const postsData = getSortedPostsData()
+
+  return postsData.map((post) => ({ id: post.id }))
+}
+
+const Page = async ({ params }: Props) => {
+  const { id } = params
+  const postData: PostData = await getPostData(id)
 
   return (
     <>
@@ -39,4 +46,4 @@ const Post = async ({ params }: Props) => {
   )
 }
 
-export default Post
+export default Page
