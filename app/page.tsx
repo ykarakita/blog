@@ -16,10 +16,12 @@ export default function Home() {
       <ul>
         {allPostsData.map((post) => (
           <li key={post.id}>
-            <span className="mr-3">
-              <Link href={`posts/${post.id}`}>{post.title}</Link>
+            <span className="mr-3">{Date(post.date)}</span>
+            <span>
+              <Link href={`posts/${post.id}`} className="underline">
+                {post.title}
+              </Link>
             </span>
-            <span>{Date(post.date)}</span>
           </li>
         ))}
       </ul>
