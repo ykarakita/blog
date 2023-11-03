@@ -21,5 +21,13 @@ body {
 }
 
 .markdown ul {
-  @apply m-2 pl-5 list-disc;
+  @apply m-1 pl-5 list-disc;
+}
+
+.markdown li {
+  @apply mb-1;
+}
+
+.markdown a {
+  @apply text-blue-500 underline
 }
