@@ -8,6 +8,8 @@ type AllPostsData = {
   id: string
 }[]
 
+export const dynamic = 'error'
+
 export default function Home() {
   const allPostsData: AllPostsData = getSortedPostsData()
 
