@@ -1,30 +1,30 @@
-import { getPostData } from "@/lib/posts";
-import { Date } from "@/components/Date";
+import { getPostData } from '@/lib/posts'
+import { Date } from '@/components/Date'
 
 type Params = {
-  id: string;
-};
+  id: string
+}
 
 type Props = {
-  params: Params;
-};
+  params: Params
+}
 
 type PostData = {
-  title: string;
-  date: string;
-  contentHtml: string;
-};
+  title: string
+  date: string
+  contentHtml: string
+}
 
 export const generateMetadata = async ({ params }: Props) => {
-  const postData: PostData = await getPostData(params.id);
+  const postData: PostData = await getPostData(params.id)
 
   return {
     title: postData.title,
-  };
-};
+  }
+}
 
 const Post = async ({ params }: Props) => {
-  const postData: PostData = await getPostData(params.id);
+  const postData: PostData = await getPostData(params.id)
 
   return (
     <>
@@ -34,12 +34,9 @@ const Post = async ({ params }: Props) => {
         <span>{Date(postData.date)}</span>
       </div>
 
-      <div
-        className="text-gray-600"
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      />
+      <div className="text-gray-600" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post

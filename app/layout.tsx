@@ -1,21 +1,17 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Header } from "@/components/Header";
-import siteMetadata from "@/data/siteMetadata";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import { Header } from '@/components/Header'
+import siteMetadata from '@/data/siteMetadata'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
-};
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
       <body className={`${inter.className}`}>
@@ -25,5 +21,5 @@ export default function RootLayout({
         </section>
       </body>
     </html>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import siteMetadata from "@/data/siteMetadata";
-import Link from "next/link";
+import siteMetadata from '@/data/siteMetadata'
+import Link from 'next/link'
 
 export const Header = () => {
   return (
@@ -8,5 +8,5 @@ export const Header = () => {
         <Link href="/">{siteMetadata.title}</Link>
       </h1>
     </header>
-  );
-};
+  )
+}
