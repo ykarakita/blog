@@ -40,7 +40,7 @@ const Page = async ({ params }: Props) => {
 
       <div className="text-gray-600 mb-5">{Date(postData.date)}</div>
 
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className="markdown" />
 
       <div className="mt-5">
         <Link href="/" className="text-gray-600 text-sm underline">

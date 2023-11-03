@@ -15,3 +15,11 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+.markdown {
+  @apply whitespace-normal;
+}
+
+.markdown ul {
+  @apply m-2 pl-5 list-disc;
+}
