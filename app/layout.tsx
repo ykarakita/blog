@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
+      <Head>
+        <meta name="format-detection" content="telephone=no" />
+      </Head>
       <body className={`${inter.className}`}>
         <section className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
           <Header />
