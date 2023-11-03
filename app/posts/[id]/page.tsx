@@ -42,7 +42,7 @@ const Page = async ({ params }: Props) => {
 
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} className="markdown" />
 
-      <div className="mt-5">
+      <div className="my-5">
         <Link href="/" className="text-gray-600 text-sm underline">
           Back to Top
         </Link>
