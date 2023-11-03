@@ -10,14 +10,16 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
-      <Head>
-        <meta name="format-detection" content="telephone=no" />
-      </Head>
       <body className={`${inter.className}`}>
         <section className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
           <Header />
