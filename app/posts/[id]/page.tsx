@@ -37,7 +37,7 @@ const Page = async ({ params }: Props) => {
     <>
       <h1 className="text-2xl mb-1">{postData.title}</h1>
 
-      <div className="text-gray-500 mb-10">{Date(postData.date)}</div>
+      <div className="text-gray-500 mb-5">{Date(postData.date)}</div>
 
       <div className="text-600" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </>
