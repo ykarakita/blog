@@ -1,5 +1,6 @@
 import { getPostData, getSortedPostsData } from '@/lib/posts'
 import { Date } from '@/components/Date'
+import Link from 'next/link'
 
 type Params = {
   id: string
@@ -37,9 +38,15 @@ const Page = async ({ params }: Props) => {
     <>
       <h1 className="text-2xl mb-1">{postData.title}</h1>
 
-      <div className="text-gray-500 mb-5">{Date(postData.date)}</div>
+      <div className="text-gray-600 mb-5">{Date(postData.date)}</div>
 
-      <div className="text-600" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+
+      <div className="mt-5">
+        <Link href="/" className="text-gray-600 text-sm underline">
+          Back to Top
+        </Link>
+      </div>
     </>
   )
 }
