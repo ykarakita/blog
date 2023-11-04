@@ -15,13 +15,13 @@ export default function Home() {
     <div>
       <ul>
         {allPostsData.map((post) => (
-          <li key={post.id}>
-            <span className="mr-3">{Date(post.date)}</span>
-            <span>
-              <Link href={`posts/${post.id}`} className="underline">
+          <li key={post.id} className="mb-4">
+            <div className="text-sm text-gray-500">{Date(post.date)}</div>
+            <p>
+              <Link href={`posts/${post.id}`} className="text-xl hover:underline">
                 {post.title}
               </Link>
-            </span>
+            </p>
           </li>
         ))}
       </ul>
