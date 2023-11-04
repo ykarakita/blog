@@ -1,6 +1,6 @@
-import { getPostData, getSortedPostsData } from '@/lib/posts'
-import { Date } from '@/components/Date'
 import Link from 'next/link'
+import { Date } from '@/components/Date'
+import { getPostData, getSortedPostsData } from '@/lib/posts'
 
 type Params = {
   id: string

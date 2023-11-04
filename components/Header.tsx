@@ -1,5 +1,5 @@
-import siteMetadata from '@/data/siteMetadata'
 import Link from 'next/link'
+import siteMetadata from '@/data/siteMetadata'
 
 export const Header = () => {
   return (

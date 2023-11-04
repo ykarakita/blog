@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { getSortedPostsData } from '@/lib/posts'
 import { Date } from '@/components/Date'
+import { getSortedPostsData } from '@/lib/posts'
 
 type AllPostsData = {
   date: string
