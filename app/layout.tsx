@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ja">
       <body className={`${notoSansJP.className}`}>
-        <section className="mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+        <section className="mx-auto max-w-2xl px-4 sm:px-6 xl:max-w-2xl xl:px-0">
           <Header />
           <main>{children}</main>
         </section>
