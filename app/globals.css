@@ -4,6 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
+  scrollbar-gutter: stable;
 }
 
 @media (prefers-color-scheme: dark) {
