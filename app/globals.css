@@ -22,11 +22,11 @@ body {
 }
 
 .markdown ul {
-  @apply m-1 pl-5 list-disc;
+  @apply my-2 pl-5 list-disc;
 }
 
 .markdown li {
-  @apply mb-1;
+  @apply mb-2;
 }
 
 .markdown a {
