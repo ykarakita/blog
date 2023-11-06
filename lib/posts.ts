@@ -12,7 +12,7 @@ type Post = {
   title: string
 }
 
-export const getSortedPostsData = (): Post[] => {
+export const getSortedPostsData = async (): Promise<Post[]> => {
   const fileNames = fs.readdirSync(postsDirectory)
 
   const allPostsData = fileNames.map((filename) => {

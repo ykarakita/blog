@@ -25,7 +25,7 @@ export const generateMetadata = async ({ params }: Props) => {
 }
 
 export const generateStaticParams = async () => {
-  const postsData = getSortedPostsData()
+  const postsData = await getSortedPostsData()
 
   return postsData.map((post) => ({ id: post.id }))
 }

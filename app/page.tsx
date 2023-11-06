@@ -11,8 +11,8 @@ type AllPostsData = {
 export const dynamic = 'force-static'
 export const dynamicParams = false
 
-export default function Home() {
-  const allPostsData: AllPostsData = getSortedPostsData()
+export default async function Home() {
+  const allPostsData: AllPostsData = await getSortedPostsData()
 
   return (
     <div>
