@@ -8,6 +8,9 @@ type AllPostsData = {
   id: string
 }[]
 
+export const dynamic = 'force-static'
+export const dynamicParams = false
+
 export default function Home() {
   const allPostsData: AllPostsData = getSortedPostsData()
 
