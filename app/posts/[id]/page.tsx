@@ -2,9 +2,7 @@ import Link from 'next/link'
 import { Date } from '@/components/Date'
 import { getPostData, getSortedPostsData } from '@/lib/posts'
 
-type Params = {
-  id: string
-}
+type Params = Promise<{ id: string }>
 
 type Props = {
   params: Params
@@ -17,7 +15,8 @@ type PostData = {
 }
 
 export const generateMetadata = async ({ params }: Props) => {
-  const postData: PostData = await getPostData(params.id)
+  const { id } = await params
+  const postData: PostData = await getPostData(id)
 
   return {
     title: postData.title,
@@ -31,7 +30,7 @@ export const generateStaticParams = async () => {
 }
 
 const Page = async ({ params }: Props) => {
-  const { id } = params
+  const { id } = await params
   const postData: PostData = await getPostData(id)
 
   return (
